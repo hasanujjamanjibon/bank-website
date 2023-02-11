@@ -7,6 +7,12 @@ loginBtn.addEventListener("click", function () {
   const passFieldValue = passwdField.value;
   if (emailFieldValue == "" && passFieldValue == "") {
     alert("valo kore bap er password de");
+  } else if (emailFieldValue == "") {
+    alert("valo kore bap er email de");
+    passwdField.value = "";
+  } else if (passFieldValue == "") {
+    alert("valo kore bap er password de");
+    emailField.value = "";
   } else {
     location.href = "dashboard.html";
   }
