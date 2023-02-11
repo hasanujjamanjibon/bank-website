@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bap Er bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="container mx-auto bg-sky-300 text-center text-5xl py-7 my-16 rounded-md font-semibold uppercase"
+    >
+      <h1>Bap er Bank</h1>
+    </header>
+    <main>
+      <section
+        class="container mx-auto bg-purple-300 px-5 py-5 rounded-md grid grid-cols-2"
+      >
+        <div class="py-32 pl-10">
+          <h3 class="text-2xl font-semibold uppercase">
+            Log-in Your bap er Account
+          </h3>
+          <div class="mt-5">
+            <input
+              class="w-3/4 mr-auto py-2 px-3 rounded-md focus:outline-0"
+              type="text"
+              placeholder="Enter your bap er email"
+              id="email-field"
+            /><br /><input
+              class="my-4 w-3/4 mr-auto py-2 px-3 rounded-md focus:outline-0"
+              type="password"
+              placeholder="Enter your bap er password"
+              id="password-field"
+            />
+            <br />
+            <button
+              id="login-btn"
+              class="bg-purple-400 hover:bg-purple-600 hover:text-white transition-all px-8 py-2 rounded-md font-semibold uppercase"
+            >
+              Log-in
+            </button>
+          </div>
+        </div>
+        <div
+          class="login-label bg-teal-400 rounded-md bg-[url('./login.jpg')] bg-cover bg-no-repeat bg-center"
+        ></div>
+      </section>
+    </main>
+    <!-- ? js file -->
+
+    <script src="tailwind.config.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

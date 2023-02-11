@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bap Er bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="container mx-auto bg-sky-300 text-center text-5xl py-7 my-5 rounded-md font-semibold uppercase"
+    >
+      <h1 class="uppercase">ore re koto taka</h1>
+    </header>
+    <main>
+      <section
+        class="container mx-auto bg-gradient-to-r from-slate-200 to-red-100 p-8 rounded-md grid grid-cols-3 gap-6 drop-shadow-lg mb-8"
+      >
+        <div
+          class="shadow-lg p-8 rounded-md bg-gradient-to-r from-purple-200 to-green-200 drop-shadow-lg"
+        >
+          <h1 class="uppercase text-slate-600 font-semibold text-2xl">
+            deposit:
+          </h1>
+          <h2 class="font-semibold text-5xl text-blue-600 my-2">
+            ৳<span class="ml-2" id="deposite-balance">00</span>
+          </h2>
+        </div>
+        <div
+          class="shadow-lg p-8 rounded-md bg-gradient-to-r from-purple-200 to-green-200 drop-shadow-lg"
+        >
+          <h1 class="uppercase text-slate-600 font-semibold text-2xl">
+            withdraw:
+          </h1>
+          <h2 class="font-semibold text-5xl text-blue-600 my-2">
+            ৳<span class="ml-2" id="withdraw-balance">00</span>
+          </h2>
+        </div>
+        <div
+          class="shadow-lg p-8 rounded-md bg-gradient-to-r from-purple-200 to-green-200 drop-shadow-lg"
+        >
+          <h1 class="uppercase text-slate-600 font-semibold text-2xl">
+            balance:
+          </h1>
+          <h2 class="font-semibold text-5xl text-blue-600 my-2">
+            ৳<span class="ml-2" id="total-balance">1240</span>
+          </h2>
+        </div>
+      </section>
+      <section
+        class="container mx-auto bg-gradient-to-r from-violet-200 to-pink-200 p-8 rounded-md grid grid-cols-2 gap-8 drop-shadow-lg"
+      >
+        <div
+          class="shadow-lg p-8 rounded-md bg-gradient-to-r from-indigo-200 to-teal-200 drop-shadow-lg"
+        >
+          <div class="py-5">
+            <div>
+              <h1 class="uppercase font-semibold text-3xl mb-3 text-black">
+                deposit:
+              </h1>
+              <input
+                class="w-3/4 mr-auto py-2 px-3 mb-5 rounded-md focus:outline-0 inline-block"
+                type="text"
+                placeholder="Koto taka Joma diba? "
+                id="deposite-field"
+              /><br />
+              <button
+                id="deposit-btn"
+                class="bg-purple-400 hover:bg-purple-600 hover:text-white transition-all px-8 py-2 rounded-md font-semibold uppercase"
+              >
+                joma de
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="shadow-lg p-8 rounded-md bg-gradient-to-r from-indigo-200 to-teal-200 drop-shadow-lg"
+        >
+          <div class="py-5">
+            <div>
+              <h1 class="uppercase font-semibold text-3xl mb-3 text-black">
+                Withdraw:
+              </h1>
+              <input
+                class="w-3/4 mr-auto py-2 px-3 mb-5 rounded-md focus:outline-0 inline-block"
+                type="text"
+                placeholder="Koto taka tulbi? "
+                id="withdraw-field"
+              /><br />
+              <button
+                id="withdraw-btn"
+                class="bg-purple-400 hover:bg-purple-600 hover:text-white transition-all px-8 py-2 rounded-md font-semibold uppercase"
+              >
+                taka utha
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ? js file -->
+    <script src="tailwind.config.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="dashboard.js"></script>
+  </body>
+</html>
