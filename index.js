@@ -5,9 +5,9 @@ const loginBtn = document.getElementById("login-btn");
 loginBtn.addEventListener("click", function () {
   const emailFieldValue = emailField.value;
   const passFieldValue = passwdField.value;
-  if (emailFieldValue === "" && passFieldValue === "") {
-    console.log("valo kore bap er passwd de");
+  if (emailFieldValue == "" && passFieldValue == "") {
+    alert("valo kore bap er password de");
   } else {
-    window.location.href = "dashboard.html";
+    location.href = "dashboard.html";
   }
 });
