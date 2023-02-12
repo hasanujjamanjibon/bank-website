@@ -7,6 +7,11 @@ const withdrawField = document.getElementById("withdraw-field");
 const depositeBtn = document.getElementById("deposit-btn");
 const withdrawBtn = document.getElementById("withdraw-btn");
 
+/* window.addEventListener("load", (event) => {
+  const totalBalance = totalbl.innerText;
+  newTotalValue = parseFloat(totalBalance);
+}); */
+
 depositeBtn.addEventListener("click", function () {
   const newDepositeValueString = depositeField.value;
   const newDepositeValue = parseFloat(newDepositeValueString);
@@ -44,17 +49,21 @@ withdrawBtn.addEventListener("click", function () {
   const withdrawtotalString = withdrawbl.innerText;
   const previousWithdrawValue = parseFloat(withdrawtotalString);
   //condition
+
   if (
-    isNaN(newWithdrawValue) ||
+    isNaN(withdrawField.value) ||
     withdrawField.value <= 0 ||
     withdrawField.value == ""
   ) {
     alert("Enter Valid Number");
     withdrawField.value = "";
-  } else if (totalbl.innerText < withdrawField.value) {
-    alert(" Tor bap eto taka nai");
-    withdrawField.value = "";
-  } else {
+  }
+
+  // else if (totalbl.innerText < withdrawField.value) {
+  //   alert(" Tor bap eto taka nai");
+  //   withdrawField.value = "";
+  // }
+  else {
     const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
     withdrawbl.innerText = totalWithdrawBalance;
     //
