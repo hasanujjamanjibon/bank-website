@@ -13,16 +13,28 @@ depositeBtn.addEventListener("click", function () {
   //
   const previousDepositeTotalString = depositebl.innerText;
   const previousDepositeValue = parseFloat(previousDepositeTotalString);
+  //condition
+  if (
+    isNaN(newDepositeValueString) ||
+    depositeField.value <= 0 ||
+    depositeField.value == ""
+  ) {
+    alert("Enter Valid Number");
+    depositeField.value = "";
+  } else {
+    const currentDepositeTotal = previousDepositeValue + newDepositeValue;
+    depositebl.innerText = currentDepositeTotal;
+    const totalBalance = totalbl.innerText;
+    const newTotalValue = parseFloat(totalBalance);
+    const currentTotalBalance = newTotalValue + newDepositeValue;
+    totalbl.innerText = currentTotalBalance;
+    depositeField.value = "";
+  }
   //
-  const currentDepositeTotal = previousDepositeValue + newDepositeValue;
+
   //
-  depositebl.innerText = currentDepositeTotal;
+
   //
-  const totalBalance = totalbl.innerText;
-  const newTotalValue = parseFloat(totalBalance);
-  const currentTotalBalance = newTotalValue + newDepositeValue;
-  totalbl.innerText = currentTotalBalance;
-  depositeField.value = "";
 });
 
 withdrawBtn.addEventListener("click", function () {
@@ -31,15 +43,27 @@ withdrawBtn.addEventListener("click", function () {
   //
   const withdrawtotalString = withdrawbl.innerText;
   const previousWithdrawValue = parseFloat(withdrawtotalString);
-  //
-  const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
-  withdrawbl.innerText = totalWithdrawBalance;
-  //
-  const totalBalance = totalbl.innerText;
-  const newTotalValue = parseFloat(totalBalance);
-  const currentTotalBalance = newTotalValue - newWithdrawValue;
-  totalbl.innerText = currentTotalBalance;
+  //condition
+  if (
+    isNaN(withdrawfieldString) ||
+    withdrawField.value <= 0 ||
+    withdrawField.value == ""
+  ) {
+    alert("Enter Valid Number");
+    withdrawField.value = "";
+  } else if (totalbl.innerText < withdrawField.value) {
+    alert(" Tor bap eto taka nai");
+    withdrawField.value = "";
+  } else {
+    const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
+    withdrawbl.innerText = totalWithdrawBalance;
+    //
+    const totalBalance = totalbl.innerText;
+    const newTotalValue = parseFloat(totalBalance);
+    const currentTotalBalance = newTotalValue - newWithdrawValue;
+    totalbl.innerText = currentTotalBalance;
 
-  //
-  withdrawField.value = "";
+    //
+    withdrawField.value = "";
+  }
 });

@@ -6,7 +6,7 @@ loginBtn.addEventListener("click", function () {
   const emailFieldValue = emailField.value;
   const passFieldValue = passwdField.value;
   if (emailFieldValue == "" && passFieldValue == "") {
-    alert("valo kore bap er password de");
+    alert("valo kore bap er email soho password de");
   } else if (emailFieldValue == "") {
     alert("valo kore bap er email de");
     passwdField.value = "";
