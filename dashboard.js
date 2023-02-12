@@ -46,15 +46,18 @@ withdrawBtn.addEventListener("click", function () {
   //condition
   if (
     isNaN(withdrawfieldString) ||
-    withdrawField.value <= 0 ||
+    withdrawField.value >= 0 ||
     withdrawField.value == ""
   ) {
     alert("Enter Valid Number");
     withdrawField.value = "";
-  } else if (totalbl.innerText < withdrawField.value) {
-    alert(" Tor bap eto taka nai");
-    withdrawField.value = "";
-  } else {
+  }
+
+  // else if (totalbl.innerText < withdrawField.value) {
+  //   alert(" Tor bap eto taka nai");
+  //   withdrawField.value = "";
+  // }
+  else {
     const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
     withdrawbl.innerText = totalWithdrawBalance;
     //
