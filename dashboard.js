@@ -45,7 +45,7 @@ withdrawBtn.addEventListener("click", function () {
   const previousWithdrawValue = parseFloat(withdrawtotalString);
   //condition
   if (
-    isNaN(withdrawfieldString) ||
+    isNaN(newWithdrawValue) ||
     withdrawField.value <= 0 ||
     withdrawField.value == ""
   ) {
