@@ -44,10 +44,12 @@ depositeBtn.addEventListener("click", function () {
 
 withdrawBtn.addEventListener("click", function () {
   const withdrawfieldString = withdrawField.value;
-  const newWithdrawValue = parseFloat(withdrawfieldString);
+  const newWithdrawValue = parseFloat(withdrawfieldString).toFixed(2);
+  const withdrawAmount = parseFloat(newWithdrawValue);
   //
   const withdrawtotalString = withdrawbl.innerText;
-  const previousWithdrawValue = parseFloat(withdrawtotalString);
+  const previousWithdrawValue = parseFloat(withdrawtotalString).toFixed(2);
+  const previousWithdrawAmount = parseFloat(previousWithdrawValue);
   //condition
 
   if (
@@ -57,19 +59,17 @@ withdrawBtn.addEventListener("click", function () {
   ) {
     alert("Enter Valid Number");
     withdrawField.value = "";
-  }
-
-  // else if (totalbl.innerText < withdrawField.value) {
-  //   alert(" Tor bap eto taka nai");
-  //   withdrawField.value = "";
-  // }
-  else {
-    const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
+  } else {
+    // const totalWithdrawBalance = newWithdrawValue + previousWithdrawValue;
+    const totalWithdrawBalance = withdrawAmount + previousWithdrawAmount;
     withdrawbl.innerText = totalWithdrawBalance;
+
     //
     const totalBalance = totalbl.innerText;
-    const newTotalValue = parseFloat(totalBalance);
-    const currentTotalBalance = newTotalValue - newWithdrawValue;
+    const newTotalValue = parseFloat(totalBalance).toFixed(2);
+    const totalAmount = parseFloat(newTotalValue);
+    // const currentTotalBalance = newTotalValue - newWithdrawValue;
+    const currentTotalBalance = totalAmount - withdrawAmount;
     totalbl.innerText = currentTotalBalance;
 
     //
