@@ -45,11 +45,11 @@ depositeBtn.addEventListener("click", function () {
 withdrawBtn.addEventListener("click", function () {
   const withdrawfieldString = withdrawField.value;
   const newWithdrawValue = parseFloat(withdrawfieldString).toFixed(2);
-  const withdrawAmount = parseFloat(newWithdrawValue);
+  const withdrawAmount = Number(newWithdrawValue);
   //
   const withdrawtotalString = withdrawbl.innerText;
   const previousWithdrawValue = parseFloat(withdrawtotalString).toFixed(2);
-  const previousWithdrawAmount = parseFloat(previousWithdrawValue);
+  const previousWithdrawAmount = Number(previousWithdrawValue);
   //condition
 
   if (
@@ -67,7 +67,7 @@ withdrawBtn.addEventListener("click", function () {
     //
     const totalBalance = totalbl.innerText;
     const newTotalValue = parseFloat(totalBalance).toFixed(2);
-    const totalAmount = parseFloat(newTotalValue);
+    const totalAmount = Number(newTotalValue);
     // const currentTotalBalance = newTotalValue - newWithdrawValue;
     const currentTotalBalance = totalAmount - withdrawAmount;
     totalbl.innerText = currentTotalBalance;
